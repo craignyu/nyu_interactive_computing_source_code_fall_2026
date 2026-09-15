@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <!-- include the p5 core library using the CDN -->
+    <!-- script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script -->
+
+    <!-- include the p5.js library from a local file -->
+    <script src="../../js/p5/p5.min.js"></script>
+
+    <!-- custom CSS -->
+    <style type="text/css">
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* absolute positioning implementation */
+        #center_absolutepositioning {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        canvas {
+            border: 2px solid orange;
+        }
+    </style>
+
+    <!-- your custom sketch code -->
+    <script src="sketch_absolutepositioning.js"></script>
+</head>
+
+<body>
+    <div id="center_absolutepositioning"></div>
+</body>
+
+</html>

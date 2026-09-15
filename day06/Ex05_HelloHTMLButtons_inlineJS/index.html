@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <!-- include the p5 core library using the CDN -->
+    <!-- script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script -->
+
+    <!-- include the p5.js library from a local file -->
+    <script src="../../js/p5/p5.min.js"></script>
+
+    <!-- your custom sketch code -->
+    <script src="sketch.js"></script>
+
+    <!-- custom styles -->
+    <style>
+        #canvas_container {
+            margin: auto;
+            text-align: center;
+            border-bottom: 3px solid black;
+            padding-bottom: 20px;
+        }
+
+        #controls {
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello HTML Buttons</h1>
+    <div id="canvas_container"></div>
+    <div id="controls">
+        <button id="circle_button" onclick="createCircle();">Random Circle</button>
+        <button id="rectangle_button" onclick="createRectangle();">Random Rectangle</button>
+    </div>
+</body>
+
+</html>
