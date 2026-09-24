@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <!-- include the p5 core library using the CDN -->
+    <!-- script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script -->
+
+    <!-- include the p5.js library from a local file -->
+    <script src="../../js/p5/p5.min.js"></script>
+
+    <!-- your custom sketch code -->
+    <script src="sketch.js"></script>
+
+    <!-- custom styles -->
+    <style>
+        #container {
+            width: 400px;
+            float: left;
+        }
+
+        #controls {
+            padding-left: 20px;
+            float: left;
+        }
+
+        #preview {
+            display: inline-block;
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(128, 128, 128);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Saving an Image of the Canvas to localStorage</h1>
+    <div id="container"></div>
+    <div id="controls">
+        <button onclick="clearCanvas();">Clear Canvas</button>
+        <h3>Color Picker <span id="preview"></span></h3>
+        R: <input type="range" id="r" min="0" max="255" step="1" value="128" oninput="changeRed(this);"><br>
+        G: <input type="range" id="g" min="0" max="255" step="1" value="128" oninput="changeGreen(this);"><br>
+        B: <input type="range" id="b" min="0" max="255" step="1" value="128" oninput="changeBlue(this);"><br>
+    </div>
+</body>
+
+</html>
