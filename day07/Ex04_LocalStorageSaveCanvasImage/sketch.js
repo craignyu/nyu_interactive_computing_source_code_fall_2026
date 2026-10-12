@@ -10,12 +10,15 @@ let cnv;
 let previousImage = false;
 
 async function setup() {
+
+    // create our canvas and grab a p5 reference to it
+    cnv = createCanvas(400, 400);
+
     // important! ensure that we are drawing 1 pixel of data per screen pixel
     // this prevents issues from arising from very dense displays, such as a Mac Retina display
     pixelDensity(1);
 
-    // create our canvas and grab a p5 reference to it
-    cnv = createCanvas(400, 400);
+    // re-parent the container
     cnv.parent("#container");
 
     // do we have a previous image?

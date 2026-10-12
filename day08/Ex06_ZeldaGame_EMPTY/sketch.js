@@ -4,18 +4,16 @@ let enemy_left, enemy_right;
 let floor_background;
 let key_graphic;
 
-// preload assets
-function preload() {
-    user_left = loadImage('../images/zeldaImages/user_left.png');
-    user_right = loadImage('../images/zeldaImages/user_right.png');
-    enemy_left = loadImage('../images/zeldaImages/enemy_left.png');
-    enemy_right = loadImage('../images/zeldaImages/enemy_right.png');
-    floor_background = loadImage('../images/zeldaImages/floor_background.jpg');
-    key_graphic = loadImage('../images/zeldaImages/key_graphic.png');
-}
-
-function setup() {
+async function setup() {
     createCanvas(500, 500);
+
+    // load art assets
+    user_left = await loadImage('../images/zeldaImages/user_left.png');
+    user_right = await loadImage('../images/zeldaImages/user_right.png');
+    enemy_left = await loadImage('../images/zeldaImages/enemy_left.png');
+    enemy_right = await loadImage('../images/zeldaImages/enemy_right.png');
+    floor_background = await loadImage('../images/zeldaImages/floor_background.jpg');
+    key_graphic = await loadImage('../images/zeldaImages/key_graphic.png');
 
     // all images should be drawn from their center points
     imageMode(CENTER);
